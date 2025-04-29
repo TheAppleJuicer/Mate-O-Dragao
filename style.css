@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
+
+body {
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+h1 {
+    justify-content: center;
+    align-items: center;
+    
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 750%;
+    color: rgb(255, 123, 0);
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+  
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    width: 15vw;
+    height: 12vh;
+    
+    background-color: black;
+    border: 5px solid white;
+}
+.creditos{
+    color: red;
+    gap: 50px;
+}
+.galeria{
+    color: rgb(255, 38, 0);
+    gap: 50px;
+}
+.configuracoes{
+    color: orangered;
+    gap: 50px;
+}
+.comecar{
+    color: orange;
+    gap: 250px;
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: black;
+    font-weight: 400;
+    font-style: normal;
+}

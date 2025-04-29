@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="stylejogo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Mate O Dragão</title>
+
+</head>
+
+<body>
+    <audio autoplay id="musicaFundo">
+        <source src="/Metallica Fade To Black 8 bits [8_LGwcl-OtQ].mp3" type="audio/mpeg">
+    </audio>
+    <div class="conteudo">
+
+        <!-- ESQUERDA -->
+        <section class="heroi">
+            <div class="caixa">
+                <div id="cavalo" style="width: 300px; 
+                word-break: break-word; 
+                overflow-wrap: break-word;"></div>
+
+            </div>
+            <button type="button" class="botao" id="sicario" onclick="showSicario('/img/sicario.png')">O
+                Sicário</button>
+            <button type="button" class="botao" id="soldado" onclick="showSoldado('/img/soldado.png')">O
+                Soldado</button>
+            <button type="button" class="botao" id="sagrado" onclick="showSagrado('/img/sagrado.png')">O
+                Sagrado</button>
+                <br>
+                <br>
+                <button type="button" class="botaoConfirmar" onclick="abrirPopup()">O Surgimento</button>
+
+        </section>
+
+        <!-- CENTRO -->
+        <div class="mundo">
+            <img src="/img/mundo.png" alt="Imagem do mundo" class="mundoImg" id="imagemCentral">
+        </div>
+
+
+
+        <!-- DIREITA -->
+        <section class="ficha">
+            <h2>Ficha</h2>
+            <div class="caixa">
+                <div id="descricao"></div>
+
+            </div>
+
+            <h3>Habilidades</h3>
+            <div class="habilidades">
+                <div class="habilidade"
+                    onmouseover="mostrarDescricaoHabilidade('Sua força bruta e poder corporal. Mostre a eles do que você é feito.')"
+                    onmouseout="limparDescricaoHabilidade()">
+                    <div class="barras" id="forca"></div>
+                    Força
+                </div>
+                <div class="habilidade"
+                    onmouseover="mostrarDescricaoHabilidade('Sua destreza, velocidade e habilidade manual. Eles nem vão ver de onde você veio.')"
+                    onmouseout="limparDescricaoHabilidade()">
+                    <div class="barras" id="agilidade"></div>
+                    Agilidade
+                </div>
+                <div class="habilidade"
+                    onmouseover="mostrarDescricaoHabilidade('Sua saúde e construção corporal. Fique vivo a qualquer custo.')"
+                    onmouseout="limparDescricaoHabilidade()">
+                    <div class="barras" id="saude"></div>
+                    Saúde
+                </div>
+                <div class="habilidade"
+                    onmouseover="mostrarDescricaoHabilidade('Sua presença e língua de prata. Controle e manipule.')"
+                    onmouseout="limparDescricaoHabilidade()">
+                    <div class="barras" id="mente"></div>
+                    Mente
+                </div>
+            </div>
+            <div id="descricaoHabilidades" class="descricao-habilidade"></div>
+
+
+        </section>
+
+         <!-- POPUP -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="fecharPopup()">&times;</span>
+            <h2>Escolha seu Herói</h2>
+            <button class="popup-button" onclick="escolherHeroi('sicario')">O Sicário</button>
+            <button class="popup-button" onclick="escolherHeroi('soldado')">O Soldado</button>
+            <button class="popup-button" onclick="escolherHeroi('sagrado')">O Sagrado</button>
+        </div>
+    </div>
+    </div>
+    <!--CHÃO-->
+    <section class="footer">
+        <footer>
+            <button id="pularTexto" class="pularTexto">Pular Texto</button>
+        </footer>
+    </section>
+</body>
+
+</html>
+<script src="./scriptjogo.js"></script>
